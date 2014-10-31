@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView
+	        android:id="@+id/lblNome"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="8dp"
+	        android:layout_y="9dp"
+	        android:text="@string/lblNome"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+	 <EditText
+	        android:id="@+id/txtNome"
+	        android:layout_width="180dp"
+	        android:layout_height="40dp"
+	        android:layout_x="78dp"
+	        android:layout_y="50dp"
+	        android:inputType="textPersonName" />
+	 
+
+
+	    <TextView
+	        android:id="@+id/lblCor"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="7dp"
+	        android:layout_y="52dp"
+	        android:text="@string/lblCor"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+	    
+
+	    <EditText
+	        android:id="@+id/txtCor"
+	        android:layout_width="180dp"
+	        android:layout_height="40dp"
+	        android:layout_x="78dp"
+	        android:layout_y="50dp"
+	        android:inputType="textPersonName" />
+
+	    <Spinner
+	        android:id="@+id/spinnerTipoAnimal"
+	        android:layout_width="174dp"
+	        android:layout_height="82dp" />
+	
+	    <Button
+	        android:id="@+id/btnSalvar"
+	        android:layout_width="82dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/btnSalvar" />
+	 
+	    <Button
+	        android:id="@+id/btnCancelar"
+	        android:layout_width="132dp"
+	        android:layout_height="wrap_content"
+	        android:layout_x="78dp"
+	        android:layout_y="141dp"
+	        android:text="Cancelar" />
+	 
+</LinearLayout>

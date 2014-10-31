@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TCC</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ContextoDados_onUpgrade">         CREATE TABLE IF NOT EXISTS  Animais (ID INTEGER PRIMARY KEY AUTOINCREMENT, Tipo TEXT, Cor TEXT);</string>
+    <string name="ContextoDados_onCreate">	    CREATE TABLE IF NOT EXISTS Animais (ID INTEGER PRIMARY KEY AUTOINCREMENT, Tipo TEXT, Cor TEXT);</string>
+    <string name="animais">Animais</string>
+    <string name="btnSalvar">Salvar</string>
+    <string name="btnSalvarIngre_Nutri">Salvar</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="lblNome">Nome:</string>
+    <string name="lblSel_Ingrediente">Selecione um Ingrediente:</string>
+    <string name="porcNutriente">Porcentagem Nutriente</string>
+    <string name="lblSel_Nutriente">Selecione um Nutriente:</string>
+    <string name="lblCor">Cor:</string>
+    <string name="ContextoDados_onUpgrade_ingrediente">         CREATE TABLE IF NOT EXISTS  Ingredientes (ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT);</string>
+    <string name="ContextoDados_onCreate_ingrediente">	    CREATE TABLE IF NOT EXISTS Ingredientes (ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT);</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="lblNomeIngrediente">Nome:</string>
+    <string name="lblPrecoIngrediente">Preço/Kg:</string>
+    <string name="btnSalvarIngrediente">Salvar</string>
+    <string name="btnCancelarIngrediente">Cancelar</string>
+    <string name="title_activity_cadastro">Cadastro Animais</string>
+    <string name="title_activity_cadastro_ingrediente">Cadastros Ingredinte</string>
+    <string name="ContextoDados_onUpgrade_nutriente">         CREATE TABLE IF NOT EXISTS  Nutrientes (ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT);</string>
+    <string name="ContextoDados_onCreate_nutriente">	    CREATE TABLE IF NOT EXISTS Nutrientes (ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT);</string>
+    <string name="nutrientes">Nutrientes</string>
+    <string name="lblNomeNutriente">Nome:</string>
+    <string name="btnSalvarNutriente">Salvar</string>
+    <string name="title_activity_cadastro_nutriente">Cadastros Nutriente</string>
+    <string name="ContextoDados_onUpgrade_tipo_animal">         CREATE TABLE IF NOT EXISTS  Tipo_Animal (ID INTEGER PRIMARY KEY AUTOINCREMENT, TipoAnimal TEXT);</string>
+    <string name="ContextoDados_onCreate_tipo_animal">	    CREATE TABLE IF NOT EXISTS Tipo_Animal (ID INTEGER PRIMARY KEY AUTOINCREMENT, TipoAnimal TEXT);</string>
+    <string name="tipo_animal">Tipo Animal</string>
+    <string name="lblTipoAnimal">Tipo</string>    
+    <string name="btnSalvarTipoAnimal">Salvar</string>
+    <string name="btnCancelarTipoAnimal">Cancelar</string>
+    <string name="title_activity_cadastro_tipo_animal">Cadastros Tipo Animal</string>
+    <string name="title_activity_ingr_nutri">Vincula Ingrediente Nutriente</string>
+    <string-array name="spinnerTipoAnimal">
+        <item >Laine</item>
+        <item >Teste</item>
+        <item >Josee</item>
+    </string-array>
+    
+    
+
+</resources>

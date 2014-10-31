@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+<TextView
+	        android:id="@+id/lblNomeIngrediente"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="8dp"
+	        android:layout_y="9dp"
+	        android:text="@string/lblNomeIngrediente"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+	<TextView
+	        android:id="@+id/lblPrecoIngrediente"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_x="8dp"
+	        android:layout_y="9dp"
+	        android:text="@string/lblPrecoIngrediente"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	 <EditText
+	        android:id="@+id/txtNomeIngrediente"
+	        android:layout_width="180dp"
+	        android:layout_height="40dp"
+	        android:layout_x="78dp"
+	        android:layout_y="50dp"
+	        android:inputType="textPersonName" />
+	 
+	 
+	 <EditText
+	        android:id="@+id/txtPrecoIngrediente"
+	        android:layout_width="180dp"
+	        android:layout_height="40dp"
+	        android:layout_x="78dp"
+	        android:layout_y="50dp"
+	        android:inputType="textPersonName" />
+	 
+	 
+	    <Button
+	        android:id="@+id/btnSalvarIngrediente"
+	        android:layout_width="82dp"
+	        android:layout_height="wrap_content"
+	        android:layout_x="173dp"
+	        android:layout_y="142dp"
+	        android:text="@string/btnSalvarIngrediente" />
+	 
+	    <Button
+	        android:id="@+id/btnCancelarIngrediente"
+	        android:layout_width="132dp"
+	        android:layout_height="wrap_content"
+	        android:layout_x="78dp"
+	        android:layout_y="141dp"
+	        android:text="Cancelar" />
+	 
+</LinearLayout>
+    
+
