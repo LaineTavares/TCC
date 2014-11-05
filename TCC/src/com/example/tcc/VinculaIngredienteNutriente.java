@@ -107,7 +107,7 @@ public class VinculaIngredienteNutriente extends Activity{
   			
   	//	}
   		
-  		//finish();
+  		finish();
       
       }
 	   

@@ -45,5 +45,16 @@
     </string-array>
     
     
+    <string-array name="menu">
+        <item>Cadastro de Animais</item>
+        <item>Cadastro de Ingrediente</item>
+        <item>Cadastro de Nutriente</item>
+    </string-array>
+    <string-array name="menu_icones">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+    </string-array>
+    
 
 </resources>

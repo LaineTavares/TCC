@@ -64,7 +64,7 @@ public class CadastroIngrediente extends Activity{
 		tccDao.salvar(ingrediente);
 		List<Ingrediente> ingredientes = tccDao.recuperarTodosIngrediente();
 		for(Ingrediente ingrediente2 : ingredientes){
-			Log.d("ingrediente", ingrediente2.getNomeIngrediente());
+			Log.d("ingrediente", ingrediente2.getPrecoIngrediente());
 			
 		}
 		

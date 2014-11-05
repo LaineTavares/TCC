@@ -35,7 +35,7 @@ public class TccDao {
 	public static final String idNutri_Ingre = "idNutri_Ingri";
 	
 	public static final String tabela_nutriente = "Nutrientes";
-	public static final String idTabelaNutriente = "idTabelaIndrediente";
+	public static final String idTabelaNutriente = "idTabelaNutriente";
 	public static final String idNutriente = "idNutriente";
 	public static final String nomeNutriente = "nomeNutriente";
 	
@@ -71,7 +71,7 @@ public class TccDao {
 	
 	public static final String CREATE_TABLE_NUTRIENTE = "CREATE TABLE IF NOT EXISTS "
 			+ tabela_nutriente + "("+ idTabelaNutriente  
-			+ " INTEGER PRIMARY KEY AUTOINCREMENT," + idNutriente + " Long ," + nomeNutriente + " TEXT );";
+			+ " INTEGER PRIMARY KEY AUTOINCREMENT," + nomeNutriente + " TEXT );";
 	
 	public static final String DELETE_TABLE_NUTRIENTE = "DROP TABLE IF EXISTS " +
 			tabela_nutriente;
@@ -136,6 +136,7 @@ public class TccDao {
 	private ContentValues gerarContentValuesIngredientes(Ingrediente ingrediente){
 		ContentValues values = new ContentValues();
 		values.put(nomeIngrediente, ingrediente.getNomeIngrediente());
+		values.put(precoIngrediente, ingrediente.getPrecoIngrediente());
 		//values.put(idIngrediente, ingrediente.getId());
 		
 		return values;
@@ -153,7 +154,7 @@ public class TccDao {
 	private ContentValues gerarContentValuesNutrientes(Nutriente nutriente){
 		ContentValues values = new ContentValues();
 		values.put(nomeNutriente, nutriente.getNome());
-		//values.put(idIngrediente, ingrediente.getId());
+		//values.put(idNutriente, nutriente.getId());
 		
 		return values;
 		
@@ -171,7 +172,7 @@ public class TccDao {
 	
 	private ContentValues gerarContentValuesIngNut(Ingrediente_Nutriente ing_nutri){
 		ContentValues values = new ContentValues();
-		values.put(id, ing_nutri.getId());
+		//values.put(idTabelaIngredienteNutriente, ing_nutri.getId());
 		values.put(idIngre_Nutri, ing_nutri.getIngrediente().getId());
 		values.put(idNutri_Ingre, ing_nutri.getNutriente().getId());
 		values.put(porcentagem_Nutri, ing_nutri.getPorcentagemNutriente());
@@ -317,7 +318,7 @@ public class TccDao {
 			if (cursor.moveToFirst()) {
 				do {
 
-					int indexIdNutriente = cursor.getColumnIndex(idNutriente);
+					int indexIdNutriente = cursor.getColumnIndex(idTabelaNutriente);
 					int indexNomeNutriente = cursor.getColumnIndex(nomeNutriente);
 					
 				
