@@ -42,6 +42,11 @@
             android:name="com.example.tcc.VinculaIngredienteNutriente"
             android:label="@string/title_activity_ingr_nutri" >
         </activity>
+        <activity
+            android:name="com.example.tcc.RelatorioIngrediente"
+            android:label="@string/title_activity_rel_nutriente" >
+        </activity>
+        
     </application>
 
 </manifest>

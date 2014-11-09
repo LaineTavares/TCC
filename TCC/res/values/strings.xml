@@ -38,6 +38,7 @@
     <string name="btnCancelarTipoAnimal">Cancelar</string>
     <string name="title_activity_cadastro_tipo_animal">Cadastros Tipo Animal</string>
     <string name="title_activity_ingr_nutri">Vincula Ingrediente Nutriente</string>
+    <string name="title_activity_rel_nutriente">Relatório</string>
     <string name="help">Teste Menu</string>
     <string name="testeMenu">Teste dois</string>
     <string-array name="spinnerTipoAnimal">
