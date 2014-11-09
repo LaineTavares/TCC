@@ -26,10 +26,11 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int bt_teste=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090027;
+        public static final int action_settings=0x7f09002b;
         public static final int btnCancelar=0x7f09000e;
         public static final int btnCancelarIngrediente=0x7f090018;
         public static final int btnCancelarNutriente=0x7f09001c;
@@ -38,12 +39,15 @@ public final class R {
         public static final int btnNovoIngrediente=0x7f090003;
         public static final int btnNovoNutriente=0x7f090004;
         public static final int btnNovoTipoanimal=0x7f090005;
+        public static final int btnRelatorioNutri=0x7f090007;
         public static final int btnSalvar=0x7f09000d;
         public static final int btnSalvarIngrediente=0x7f090017;
         public static final int btnSalvarNutriente=0x7f09001b;
         public static final int btnSalvarTipoAnimal=0x7f090011;
         public static final int btnVinculaIng_Nutri=0x7f090006;
-        public static final int drawer=0x7f090007;
+        public static final int btnVoltar=0x7f09002a;
+        public static final int create_new=0x7f090025;
+        public static final int help=0x7f090024;
         public static final int lblCor=0x7f09000a;
         public static final int lblNome=0x7f090008;
         public static final int lblNomeIngrediente=0x7f090013;
@@ -53,10 +57,11 @@ public final class R {
         public static final int lblSel_Nutriente=0x7f090021;
         public static final int lblTipoAnimal=0x7f09000f;
         public static final int lblporcNutriente=0x7f09001f;
+        public static final int listTeste=0x7f090029;
         public static final int listaAnimais=0x7f090001;
-        public static final int menu_icone=0x7f090025;
-        public static final int menu_titulo=0x7f090026;
-        public static final int ns_menu_row=0x7f090024;
+        public static final int menu_icone=0x7f090027;
+        public static final int menu_titulo=0x7f090028;
+        public static final int ns_menu_row=0x7f090026;
         public static final int spinnerIngrediente=0x7f09001e;
         public static final int spinnerNutriente=0x7f090022;
         public static final int spinnerTipoAnimal=0x7f09000c;
@@ -79,7 +84,9 @@ public final class R {
         public static final int cadastronutriente=0x7f030005;
         public static final int ingr_nutri=0x7f030006;
         public static final int listview_nutriente=0x7f030007;
-        public static final int menuglobal=0x7f030008;
+        public static final int menu_teste=0x7f030008;
+        public static final int menuglobal=0x7f030009;
+        public static final int relatorio_nutriente=0x7f03000a;
     }
     public static final class menu {
         public static final int cadastro=0x7f080000;
@@ -107,6 +114,7 @@ public final class R {
         public static final int btnSalvarNutriente=0x7f05001b;
         public static final int btnSalvarTipoAnimal=0x7f050021;
         public static final int hello_world=0x7f050002;
+        public static final int help=0x7f050025;
         public static final int ingredientes=0x7f050010;
         public static final int lblCor=0x7f05000d;
         public static final int lblNome=0x7f050009;
@@ -118,6 +126,7 @@ public final class R {
         public static final int lblTipoAnimal=0x7f050020;
         public static final int nutrientes=0x7f050019;
         public static final int porcNutriente=0x7f05000b;
+        public static final int testeMenu=0x7f050026;
         public static final int tipo_animal=0x7f05001f;
         public static final int title_activity_cadastro=0x7f050015;
         public static final int title_activity_cadastro_ingrediente=0x7f050016;

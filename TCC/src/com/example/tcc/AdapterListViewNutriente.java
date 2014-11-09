@@ -18,9 +18,9 @@ public class AdapterListViewNutriente extends BaseAdapter{
 	
 	private Context context;
 	private LayoutInflater mInflater;
-    private List<TipoAnimal> itens;
+    private List<Nutriente> itens;
     
-    public AdapterListViewNutriente(Context context, List<TipoAnimal> itens)
+    public AdapterListViewNutriente(Context context, List<Nutriente> itens)
     {
     	super();
         this.itens = itens;
@@ -34,7 +34,7 @@ public class AdapterListViewNutriente extends BaseAdapter{
     }
  
    
-    public TipoAnimal getItem(int position)
+    public Nutriente getItem(int position)
     {
         return itens.get(position);
     }
@@ -46,8 +46,8 @@ public class AdapterListViewNutriente extends BaseAdapter{
  
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        TipoAnimal item = itens.get(position);
-        Log.i("adapter", item.getTipoAnimal());
+        Nutriente item = itens.get(position);
+        Log.i("adapter", item.getNome());
         //view = mInflater.inflate(R.layout.listview_nutriente, null);
         View layout;
         
@@ -60,10 +60,10 @@ public class AdapterListViewNutriente extends BaseAdapter{
 			layout = convertView;
 		}
 		
-		Log.i("adapter", item.getTipoAnimal());
+		Log.i("adapter", item.getNome());
 		TextView txtNome = (TextView) layout.findViewById(R.id.textNutriente);
 		
-		txtNome.setText(item.getTipoAnimal());
+		txtNome.setText(item.getNome());
 		
         return layout;
     }
