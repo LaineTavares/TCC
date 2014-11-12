@@ -43,8 +43,13 @@
             android:label="@string/title_activity_ingr_nutri" >
         </activity>
         <activity
-            android:name="com.example.tcc.RelatorioIngrediente"
+            android:name="com.example.tcc.RelatorioNutriente"
             android:label="@string/title_activity_rel_nutriente" >
+        </activity>
+        <activity 
+            android:name="com.example.tcc.RelatorioIngrediente"
+            android:label="@string/titel_activity_rel_ingrediente">
+            
         </activity>
         
     </application>

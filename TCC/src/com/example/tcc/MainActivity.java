@@ -42,6 +42,9 @@ public class MainActivity extends Activity {
 	Button btnNovoTipoAnimal;
 	Button btnNovoIng_Nutri;
 	Button btnRelNutriente;
+	Button btnRelIngrediente;
+	Button btnRelAnimais;
+	Button btnRelVinculo;
 	
 	private ListView mDrawerList;
 	private ListView lista;
@@ -60,25 +63,9 @@ public class MainActivity extends Activity {
 		 
 		 //mDrawer = (DrawerLayout) findViewById(R.id.help);
 		 CarregarInterfaceListagem();
-		 lista = (ListView) findViewById(R.id.listTeste);
-		 montaLista();
-		 Log.i("lista" , listaExemplo.size() + "");
-		 exemploAdapter = new AdapterListViewNutriente(MainActivity.this, listaExemplo); 
-		 lista.setAdapter(exemploAdapter);
-		 Log.i("lista" , exemploAdapter.getCount() + "");
- 		}
-	
-	private void montaLista(){
-		listaExemplo = new ArrayList<Nutriente>();
-		TccDao tccDao = TccDao.getInstance(this);
-		listaExemplo = tccDao.recuperarTodosNutrientes();
-		for(Nutriente nutri : listaExemplo){
-		   	Log.i("entrei", nutri.getNome());
-		}
-		//Nutriente ex1 = new Nutriente("Diego", 1);
-		//listaExemplo.add(ex1);
-	
+		
 	}
+
 
 	
 	@Override
@@ -122,6 +109,7 @@ public class MainActivity extends Activity {
 		            public void onClick(View v) {
 		            Intent it = new Intent(getApplicationContext(), CadastroAnimal.class);
 		            startActivity(it);
+		            
 		       				            
 		            }});
 		 
@@ -154,18 +142,45 @@ public class MainActivity extends Activity {
 							
 				});
 		        
+		      		   
 		        btnRelNutriente = (Button) findViewById(R.id.btnRelatorioNutri);
 		        btnRelNutriente.setOnClickListener(new OnClickListener() {
 		        	public void onClick(View v){
-		        		Intent it = new Intent(getApplicationContext(), RelatorioIngrediente.class);
+		        		Intent it = new Intent(getApplicationContext(), RelatorioNutriente.class);
 		        		startActivity(it);
 		        		
 		        	}
 							
 				});
 		        
-		   
+		        btnRelIngrediente = (Button) findViewById(R.id.btnRelatorioIngrediente);
+		        btnRelIngrediente.setOnClickListener(new OnClickListener() {
+					public void onClick(View v) {
+						Intent it = new Intent(getApplicationContext(), RelatorioIngrediente.class);
+		        		startActivity(it);
+						
+					}
+				});
 		        
+		        btnRelAnimais = (Button) findViewById(R.id.btnRelatorioAnimais);
+		        btnRelAnimais.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						
+					}
+				});
+		        
+		        btnRelVinculo = (Button) findViewById(R.id.btnRelatorioVincula);
+		        btnRelVinculo.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						
+					}
+				});
 		        
 		    }
 	

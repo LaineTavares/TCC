@@ -52,6 +52,24 @@
 	android:layout_height="wrap_content"
 	android:text="Relatório Nutriente"/>
 	
+	<Button
+	android:id="@+id/btnRelatorioAnimais"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Relatório Animais"/>
+	
+	<Button
+	android:id="@+id/btnRelatorioIngrediente"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Relatório Ingredientes"/>
+	
+	<Button
+	android:id="@+id/btnRelatorioVincula"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Relatório Vinculos"/>
+	
 	   
 	
 </LinearLayout>
