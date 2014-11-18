@@ -35,17 +35,11 @@ import android.widget.TextView;
 import android.view.View.OnClickListener;
 
 public class MainActivity extends Activity {
-
-	Button btnNovo;
-	Button btnNovoIngrediente;
-	Button btnNovoNutriente;
-	Button btnNovoTipoAnimal;
-	Button btnNovoIng_Nutri;
-	Button btnRelNutriente;
-	Button btnRelIngrediente;
-	Button btnRelAnimais;
-	Button btnRelVinculo;
-	
+	Button btnCadastros;
+	Button btnRelatoriosButton;
+	Button btnGraficos;
+	Button btnFechar;
+		
 	private ListView mDrawerList;
 	private ListView lista;
 	private DrawerLayout mDrawer;
@@ -91,99 +85,32 @@ public class MainActivity extends Activity {
 	
 	public void CarregarInterfaceListagem()
 		    {
-		        setContentView(R.layout.activity_main);
+		        //setContentView(R.layout.activity_main);
+				setContentView(R.layout.tela_inicial);
 		 
 		        //configurando o botão de criar novo cadastro
 		        
-		        btnNovoIngrediente = (Button)findViewById(R.id.btnNovoIngrediente);
-		        btnNovoIngrediente.setOnClickListener(new OnClickListener(){
-		        	public void onClick(View v){
-		        		Intent it = new Intent(getApplicationContext(), CadastroIngrediente.class);
-		        		startActivity(it);
-		        		
-		        	}
-		        	
-		        });
-		        btnNovo = (Button)findViewById(R.id.btnNovo);
-		        btnNovo.setOnClickListener(new OnClickListener(){
-		            public void onClick(View v) {
-		            Intent it = new Intent(getApplicationContext(), CadastroAnimal.class);
-		            startActivity(it);
-		            
-		       				            
-		            }});
-		 
-		        btnNovoNutriente = (Button)findViewById(R.id.btnNovoNutriente);
-		        btnNovoNutriente.setOnClickListener(new OnClickListener(){
-		        	public void onClick(View v){
-		        		Intent it = new Intent(getApplicationContext(), CadastroNutriente.class);
-		        		startActivity(it);
-		        		
-		        	}
-		        	
-		        });
-		        btnNovoTipoAnimal = (Button)findViewById(R.id.btnNovoTipoanimal);
-		        btnNovoTipoAnimal.setOnClickListener(new OnClickListener(){
-		        	public void onClick(View v){
-		        		Intent it = new Intent(getApplicationContext(), CadastroTipoAnimal.class);
-		        		startActivity(it);
-		        		
-		        	}
-		        			        	
-		        });
-		        
-		        btnNovoIng_Nutri = (Button) findViewById(R.id.btnVinculaIng_Nutri);
-		        btnNovoIng_Nutri.setOnClickListener(new OnClickListener() {
-		        	public void onClick(View v){
-		        		Intent it = new Intent(getApplicationContext(), VinculaIngredienteNutriente.class);
-		        		startActivity(it);
-		        		
-		        	}
-							
-				});
-		        
-		      		   
-		        btnRelNutriente = (Button) findViewById(R.id.btnRelatorioNutri);
-		        btnRelNutriente.setOnClickListener(new OnClickListener() {
-		        	public void onClick(View v){
-		        		Intent it = new Intent(getApplicationContext(), RelatorioNutriente.class);
-		        		startActivity(it);
-		        		
-		        	}
-							
-				});
-		        
-		        btnRelIngrediente = (Button) findViewById(R.id.btnRelatorioIngrediente);
-		        btnRelIngrediente.setOnClickListener(new OnClickListener() {
-					public void onClick(View v) {
-						Intent it = new Intent(getApplicationContext(), RelatorioIngrediente.class);
-		        		startActivity(it);
-						
-					}
-				});
-		        
-		        btnRelAnimais = (Button) findViewById(R.id.btnRelatorioAnimais);
-		        btnRelAnimais.setOnClickListener(new OnClickListener() {
+				btnCadastros = (Button)findViewById(R.id.btnCadastros);
+				btnCadastros.setOnClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View v) {
-						// TODO Auto-generated method stub
+						Intent it = new Intent(getApplicationContext(), Cadastros.class);
+		        		startActivity(it);
 						
 					}
 				});
-		        
-		        btnRelVinculo = (Button) findViewById(R.id.btnRelatorioVincula);
-		        btnRelVinculo.setOnClickListener(new OnClickListener() {
-					
-					@Override
-					public void onClick(View v) {
-						// TODO Auto-generated method stub
-						
-					}
-				});
+				
+				 btnRelatoriosButton = (Button) findViewById(R.id.btnRelatorios);
+			     btnRelatoriosButton.setOnClickListener(new OnClickListener() {
+						public void onClick(View v) {
+							Intent it = new Intent(getApplicationContext(), Relatorios.class);
+			        		startActivity(it);
+							
+						}
+					});	 
+			     
 		        
 		    }
 	
-	
-
 }

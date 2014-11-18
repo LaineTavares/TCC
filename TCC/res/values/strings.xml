@@ -8,6 +8,13 @@
     <string name="ContextoDados_onCreate">	    CREATE TABLE IF NOT EXISTS Animais (ID INTEGER PRIMARY KEY AUTOINCREMENT, Tipo TEXT, Cor TEXT);</string>
     <string name="animais">Animais</string>
     <string name="btnSalvar">Salvar</string>
+    <string name="btnCadastroIngrediente">Ingrediente</string>
+    <string name="btnCadastroNutriente">Nutriente</string>
+    <string name="btnCadastroAnimal">Animal</string>
+    <string name="btnCadastroTipoAnimal">tipo</string>
+    <string name="btnSairRelatorio">Voltar Relatorio</string>
+    <string name="btnVincula">Vincula</string>
+    <string name="btnVoltarCadastro">Voltar Cadastro</string>
     <string name="btnSalvarIngre_Nutri">Salvar</string>
     <string name="btnCancelar">Cancelar</string>
     <string name="lblNome">Nome:</string>
@@ -40,6 +47,8 @@
     <string name="title_activity_ingr_nutri">Vincula Ingrediente Nutriente</string>
     <string name="title_activity_rel_nutriente">Relatório</string>
     <string name="titel_activity_rel_ingrediente">Relatório Ingrediente</string>
+    <string name="title_activity_cadastros">Cadastros</string>
+    <string name="title_activity_relatorios">Relatorio</string>
     <string name="help">Teste Menu</string>
     <string name="testeMenu">Teste dois</string>
     <string-array name="spinnerTipoAnimal">
