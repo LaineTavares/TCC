@@ -49,6 +49,7 @@
     <string name="titel_activity_rel_ingrediente">Relatório Ingrediente</string>
     <string name="title_activity_cadastros">Cadastros</string>
     <string name="title_activity_relatorios">Relatorio</string>
+    <string name="title_activity_grafico">Grafico</string>
     <string name="help">Teste Menu</string>
     <string name="testeMenu">Teste dois</string>
     <string-array name="spinnerTipoAnimal">

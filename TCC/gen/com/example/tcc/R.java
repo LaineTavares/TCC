@@ -107,6 +107,7 @@ public final class R {
         public static final int relatorio_nutriente=0x7f03000d;
         public static final int relatorios=0x7f03000e;
         public static final int tela_inicial=0x7f03000f;
+        public static final int teste_grafico=0x7f030010;
     }
     public static final class menu {
         public static final int cadastro=0x7f080000;
@@ -141,7 +142,7 @@ public final class R {
         public static final int btnVincula=0x7f05000c;
         public static final int btnVoltarCadastro=0x7f05000d;
         public static final int hello_world=0x7f050002;
-        public static final int help=0x7f050030;
+        public static final int help=0x7f050031;
         public static final int ingredientes=0x7f050017;
         public static final int lblCor=0x7f050014;
         public static final int lblNome=0x7f050010;
@@ -153,7 +154,7 @@ public final class R {
         public static final int lblTipoAnimal=0x7f050027;
         public static final int nutrientes=0x7f050020;
         public static final int porcNutriente=0x7f050012;
-        public static final int testeMenu=0x7f050031;
+        public static final int testeMenu=0x7f050032;
         public static final int tipo_animal=0x7f050026;
         public static final int titel_activity_rel_ingrediente=0x7f05002d;
         public static final int title_activity_cadastro=0x7f05001c;
@@ -161,6 +162,7 @@ public final class R {
         public static final int title_activity_cadastro_nutriente=0x7f050023;
         public static final int title_activity_cadastro_tipo_animal=0x7f05002a;
         public static final int title_activity_cadastros=0x7f05002e;
+        public static final int title_activity_grafico=0x7f050030;
         public static final int title_activity_ingr_nutri=0x7f05002b;
         public static final int title_activity_rel_nutriente=0x7f05002c;
         public static final int title_activity_relatorios=0x7f05002f;

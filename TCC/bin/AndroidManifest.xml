@@ -12,7 +12,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.example.tcc.MainActivity"
             android:label="@string/app_name" >
@@ -58,6 +58,11 @@
             android:name="com.example.tcc.Relatorios"
             android:label="@string/title_activity_relatorios" >
         </activity>
+         <activity
+            android:name="com.example.tcc.criarGrafico"
+            android:label="@string/title_activity_grafico">
+         </activity>
+        
                 
     </application>
 
