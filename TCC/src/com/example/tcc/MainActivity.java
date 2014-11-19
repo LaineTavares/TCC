@@ -169,7 +169,7 @@ public class MainActivity extends Activity {
 	    final GraphicalView graphicalView = ChartFactory.getPieChartView(this, categorySeries, defaultRenderer);
 
 
-	    graphicalView.setOnClickListener(new View.OnClickListener() {
+    graphicalView.setOnClickListener(new View.OnClickListener() {
 	            @Override
 	            public void onClick(View v) {
 	            	SeriesSelection seriesSelection = graphicalView.getCurrentSeriesAndPoint();
