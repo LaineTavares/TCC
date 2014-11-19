@@ -1,31 +1,32 @@
 package com.example.tcc;
 
-import java.net.Proxy.Type;
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
 import org.achartengine.model.CategorySeries;
 import org.achartengine.model.SeriesSelection;
-import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
-import org.achartengine.renderer.XYMultipleSeriesRenderer;
-
-import entidades.Nutriente;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.graphics.Color;
-import android.graphics.Paint.Align;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
+import entidades.Nutriente;
 
 public class criarGrafico extends Activity{
 	
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		abrirGrafico();
+			}
   public void abrirGrafico(){	
 	final DefaultRenderer defaultRenderer = new DefaultRenderer();
 	defaultRenderer.setChartTitle("Convidados por grupo");
@@ -33,7 +34,7 @@ public class criarGrafico extends Activity{
     defaultRenderer.setZoomEnabled(false);
     defaultRenderer.setChartTitleTextSize(26);
     defaultRenderer.setLabelsTextSize(16);
-    //defaultRenderer.setLabelsColor(getResources().getColor(R.color.label_chart));
+    defaultRenderer.setLabelsColor(Color.GRAY);
     defaultRenderer.setStartAngle(90);
     defaultRenderer.setDisplayValues(true);
     defaultRenderer.setShowLegend(true);
@@ -42,17 +43,19 @@ public class criarGrafico extends Activity{
     defaultRenderer.setInScroll(true);
     final CategorySeries categorySeries = new CategorySeries("");
 
-    final NumberFormat  numberFormat= NumberFormat.getNumberInstance();
+    final NumberFormat numberFormat= NumberFormat.getNumberInstance();
     numberFormat.setParseIntegerOnly(true);
     numberFormat.setMinimumFractionDigits(0);
 
-  //  for (String key : convidadoEstatistica.getConvidadosGrupo().keySet()) {
-    //    categorySeries.add(key,convidadoEstatistica.getConvidadosGrupo().get(key));
-       // SimpleSeriesRenderer renderer = new SimpleSeriesRenderer();
-        //renderer.setColor(Color.parseColor(Cor.gerarCorHexa()));
-       // renderer.setChartValuesFormat(numberFormat);
-        //defaultRenderer.addSeriesRenderer(renderer);
-    //}
+    List<Nutriente> listNutriente = new ArrayList<Nutriente>();
+    listNutriente.add(new Nutriente("teste", 1));
+    for (Nutriente n : listNutriente){
+       categorySeries.add("nutriente", n.getId());
+       SimpleSeriesRenderer renderer = new SimpleSeriesRenderer();
+       renderer.setColor(Color.BLUE);
+       renderer.setChartValuesFormat(numberFormat);
+       defaultRenderer.addSeriesRenderer(renderer);
+    }
 
     final GraphicalView graphicalView = ChartFactory.getPieChartView(this, categorySeries, defaultRenderer);
 

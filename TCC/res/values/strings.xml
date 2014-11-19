@@ -69,6 +69,13 @@
         <item>@drawable/ic_launcher</item>
         <item>@drawable/ic_launcher</item>
     </string-array>
+    <string-array name="cores">
+        <item>-16777216</item>
+        <item>-12303292</item>
+        <item>-7829368</item>
+        <item>-3355444</item>
+        <item>-65536</item>
+     </string-array>
     
 
 </resources>

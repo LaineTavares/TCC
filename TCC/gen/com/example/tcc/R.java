@@ -9,6 +9,7 @@ package com.example.tcc;
 
 public final class R {
     public static final class array {
+        public static final int cores=0x7f060003;
         public static final int menu=0x7f060001;
         public static final int menu_icones=0x7f060002;
         public static final int spinnerTipoAnimal=0x7f060000;
