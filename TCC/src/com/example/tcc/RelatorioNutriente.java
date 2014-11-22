@@ -35,7 +35,7 @@ public class RelatorioNutriente extends Activity{
 		 adapterNutriente = new AdapterListViewNutriente(RelatorioNutriente.this, listaNutriente); 
 		 lista.setAdapter(adapterNutriente);
 		 Log.i("lista" , adapterNutriente.getCount() + "");
-		 CarregarInterfaceCadastro();
+		// CarregarInterfaceCadastro();
  		}
 	
 	private void montaLista(){
@@ -49,17 +49,17 @@ public class RelatorioNutriente extends Activity{
 		//listaExemplo.add(ex1);
 	
 	}
-	public void CarregarInterfaceCadastro()
-    { 
+	//public void CarregarInterfaceCadastro()
+    //{ 
         
-        btnVoltar = (Button)findViewById(R.id.btnVoltar);
-        btnVoltar.setOnClickListener(new OnClickListener(){
-            public void onClick(View v) {
+      //  btnVoltar = (Button)findViewById(R.id.btnVoltar);
+       // btnVoltar.setOnClickListener(new OnClickListener(){
+         //   public void onClick(View v) {
             	 
-	       		 finish();
-            }});
+	       //		 finish();
+            //}});
       
-    }
+    //}
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

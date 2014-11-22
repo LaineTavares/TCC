@@ -51,7 +51,7 @@ public class Cadastros extends Activity{
         btnCadastroTipoAnimal = (Button)findViewById(R.id.btnCadastroTipoAnimal);
         btnCadastroTipoAnimal.setOnClickListener(new OnClickListener(){
             public void onClick(View v) {
-            Intent it = new Intent(getApplicationContext(), TipoAnimal.class);
+            Intent it = new Intent(getApplicationContext(), CadastroTipoAnimal.class);
             startActivity(it);
             
        				            

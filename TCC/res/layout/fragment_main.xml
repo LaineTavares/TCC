@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/fundo"
+    tools:context="com.example.movimet.MainActivity$PlaceholderFragment" >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical" >
+
+         <ImageView
+             android:id="@+id/bLogo"
+             android:layout_width="230dp"
+             android:layout_height="70dp"
+             android:adjustViewBounds="true"
+             android:layout_marginLeft="30sp"
+             android:background="@drawable/animalle" />
+
+          <Button
+       android:id="@+id/btnCadastros"
+       android:layout_width="300sp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+	   android:background="#fff"
+       android:text="Cadastros" />
+   
+   	<Button
+   	    android:id="@+id/btnRelatorios"
+   	    android:layout_width="300sp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_marginTop="10dp"
+		android:background="#fff"
+   	    android:text="Relatorios" />
+   	
+   	<Button
+   	    android:id="@+id/btnGraficos"
+   	    android:layout_width="300sp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_marginTop="10dp"
+        android:background="#fff"
+   	    android:text="Gráficos" />
+                
+            </LinearLayout> 
+
+</RelativeLayout>

@@ -2,19 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#666"
     android:orientation="vertical" >
-    
-     <ListView
-        android:id="@+id/listNutriente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true" >
 
-    	</ListView>
-    	<Button
-	android:id="@+id/btnVoltar"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:text="Voltar"/>
+    <ListView
+        android:id="@+id/listNutriente"
+        android:layout_width="300sp"
+        android:layout_height="350sp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" >
+    </ListView>
+
+  
 
 </LinearLayout>
