@@ -146,7 +146,7 @@ public class MainActivity extends Activity {
     }
 	public void abrirGrafico(){	
 		final DefaultRenderer defaultRenderer = new DefaultRenderer();
-		defaultRenderer.setChartTitle("Convidados por grupo");
+		defaultRenderer.setChartTitle("Amostra de ingredientes");
 	    defaultRenderer.setZoomButtonsVisible(false);
 	    defaultRenderer.setLegendTextSize(40);
 	    defaultRenderer.setZoomEnabled(false);

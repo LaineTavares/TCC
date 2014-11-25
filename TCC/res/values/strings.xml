@@ -22,6 +22,7 @@
     <string name="porcNutriente">Porcentagem Nutriente</string>
     <string name="lblSel_Nutriente">Selecione um Nutriente:</string>
     <string name="lblCor">Cor:</string>
+    <string name="lblTipoAnimal">Tipo Animal:</string>
     <string name="ContextoDados_onUpgrade_ingrediente">         CREATE TABLE IF NOT EXISTS  Ingredientes (ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT);</string>
     <string name="ContextoDados_onCreate_ingrediente">	    CREATE TABLE IF NOT EXISTS Ingredientes (ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT);</string>
     <string name="ingredientes">Ingredientes</string>
@@ -40,17 +41,17 @@
     <string name="ContextoDados_onUpgrade_tipo_animal">         CREATE TABLE IF NOT EXISTS  Tipo_Animal (ID INTEGER PRIMARY KEY AUTOINCREMENT, TipoAnimal TEXT);</string>
     <string name="ContextoDados_onCreate_tipo_animal">	    CREATE TABLE IF NOT EXISTS Tipo_Animal (ID INTEGER PRIMARY KEY AUTOINCREMENT, TipoAnimal TEXT);</string>
     <string name="tipo_animal">Tipo Animal</string>
-    <string name="lblTipoAnimal">Tipo</string>
+    
     <string name="btnSalvarTipoAnimal">Salvar</string>
     <string name="btnCancelarTipoAnimal">Cancelar</string>
-    <string name="title_activity_cadastro_tipo_animal">Cadastros Tipo Animal</string>
-    <string name="title_activity_ingr_nutri">Vincula Ingrediente Nutriente</string>
-    <string name="title_activity_rel_nutriente">Relatório</string>
+    <string name="title_activity_cadastro_tipo_animal">Cadastrar Tipo Animal</string>
+    <string name="title_activity_ingr_nutri">Vincula Nutrient à Ingrediente</string>
+    <string name="title_activity_rel_nutriente">Relatórios</string>
     <string name="titel_activity_rel_ingrediente">Relatório Ingrediente</string>
-    <string name="title_activity_rel_animais"> Relatorio Animais</string>
+    <string name="title_activity_rel_animais"> Relatório Animais</string>
     <string name="title_activity_cadastros">Cadastros</string>
-    <string name="title_activity_relatorios">Relatorio</string>
-    <string name="title_activity_grafico">Grafico</string>
+    <string name="title_activity_relatorios">Relatórios</string>
+    <string name="title_activity_grafico">Gráficos</string>
     <string name="help">Teste Menu</string>
     <string name="testeMenu">Teste dois</string>
 

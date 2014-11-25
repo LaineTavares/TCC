@@ -18,7 +18,7 @@
             android:layout_width="150sp"
             android:layout_height="30sp"
             android:layout_marginLeft="10sp"
-            android:layout_marginTop="40sp"
+            android:layout_marginTop="60sp"
             android:text="@string/lblNomeNutriente"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="#fff"
@@ -42,7 +42,7 @@
                 android:layout_width="145sp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
-                android:layout_marginTop="20sp"
+                android:layout_marginTop="40sp"
                 android:text="@string/btnSalvarTipoAnimal" />
 
             <Button
@@ -50,7 +50,7 @@
                 android:layout_width="145sp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
-                android:layout_marginTop="20sp"
+                android:layout_marginTop="40sp"
                 android:text="Cancelar" />
         </LinearLayout>
     </LinearLayout>
