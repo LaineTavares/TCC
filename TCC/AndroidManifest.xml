@@ -34,7 +34,7 @@
             android:name="com.example.tcc.CadastroNutriente"
             android:label="@string/title_activity_cadastro_nutriente" >
         </activity>
-         <activity
+        <activity
             android:name="com.example.tcc.CadastroTipoAnimal"
             android:label="@string/title_activity_cadastro_tipo_animal" >
         </activity>
@@ -46,11 +46,11 @@
             android:name="com.example.tcc.RelatorioNutriente"
             android:label="@string/title_activity_rel_nutriente" >
         </activity>
-        <activity 
+        <activity
             android:name="com.example.tcc.RelatorioIngrediente"
-            android:label="@string/titel_activity_rel_ingrediente">
+            android:label="@string/titel_activity_rel_ingrediente" >
         </activity>
-         <activity
+        <activity
             android:name="com.example.tcc.Cadastros"
             android:label="@string/title_activity_cadastros" >
         </activity>
@@ -58,11 +58,10 @@
             android:name="com.example.tcc.Relatorios"
             android:label="@string/title_activity_relatorios" >
         </activity>
-         <activity
-            android:name="com.example.tcc.criarGrafico"
-            android:label="@string/title_activity_grafico">
-         </activity>
-        
+        <activity
+            android:name="com.example.tcc.RelatorioAnimais"
+            android:label="@string/title_activity_rel_animais" >
+        </activity>
     </application>
 
 </manifest>

@@ -32,6 +32,24 @@ public class Relatorios extends Activity{
         	}
         	
         });
+        btnRelatorioIngrediente = (Button)findViewById(R.id.btnRelatorioIngrediente);
+        btnRelatorioIngrediente.setOnClickListener(new OnClickListener(){
+        	public void onClick(View v){
+        		Intent it = new Intent(getApplicationContext(), RelatorioIngrediente.class);
+        		startActivity(it);
+        		
+        	}
+        	
+        });
+        btnRelatorioAnimal = (Button)findViewById(R.id.btnRelatorioAnimais);
+        btnRelatorioAnimal.setOnClickListener(new OnClickListener(){
+        	public void onClick(View v){
+        		Intent it = new Intent(getApplicationContext(), RelatorioAnimais.class);
+        		startActivity(it);
+        		
+        	}
+        	
+        });
         btnSairRelatorio = (Button)findViewById(R.id.btnSairRelatorio);
         btnSairRelatorio.setOnClickListener(new OnClickListener(){
             public void onClick(View v) {

@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#666">
+    android:background="@drawable/fundo_telas">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:id="@+id/btnCadastroIngrediente"
         android:layout_width="320sp"
         android:layout_height="50sp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:background="#CCC"
         android:text="Cadastrar Ingrediente" />
 
@@ -24,7 +24,7 @@
         android:id="@+id/btnCadastroNutriente"
         android:layout_width="320sp"
         android:layout_height="50sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:background="#CCC"
         android:text="Cadastrar Nutriente" />
 
@@ -32,7 +32,7 @@
         android:id="@+id/btnCadastroAnimal"
         android:layout_width="320sp"
         android:layout_height="50sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:background="#CCC"
         android:text="Cadastrar Animal" />
 
@@ -40,7 +40,7 @@
         android:id="@+id/btnCadastroTipoAnimal"
         android:layout_width="320sp"
         android:layout_height="50sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:background="#CCC"
         android:text="Cadastrar Tipo Animal" />
 
@@ -48,7 +48,7 @@
         android:id="@+id/btnVincula"
         android:layout_width="320sp"
         android:layout_height="50sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:background="#CCC"
         android:text="Vincula Ingrediente Nutriente" />
 

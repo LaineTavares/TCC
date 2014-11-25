@@ -40,25 +40,20 @@
     <string name="ContextoDados_onUpgrade_tipo_animal">         CREATE TABLE IF NOT EXISTS  Tipo_Animal (ID INTEGER PRIMARY KEY AUTOINCREMENT, TipoAnimal TEXT);</string>
     <string name="ContextoDados_onCreate_tipo_animal">	    CREATE TABLE IF NOT EXISTS Tipo_Animal (ID INTEGER PRIMARY KEY AUTOINCREMENT, TipoAnimal TEXT);</string>
     <string name="tipo_animal">Tipo Animal</string>
-    <string name="lblTipoAnimal">Tipo</string>    
+    <string name="lblTipoAnimal">Tipo</string>
     <string name="btnSalvarTipoAnimal">Salvar</string>
     <string name="btnCancelarTipoAnimal">Cancelar</string>
     <string name="title_activity_cadastro_tipo_animal">Cadastros Tipo Animal</string>
     <string name="title_activity_ingr_nutri">Vincula Ingrediente Nutriente</string>
     <string name="title_activity_rel_nutriente">Relatório</string>
     <string name="titel_activity_rel_ingrediente">Relatório Ingrediente</string>
+    <string name="title_activity_rel_animais"> Relatorio Animais</string>
     <string name="title_activity_cadastros">Cadastros</string>
     <string name="title_activity_relatorios">Relatorio</string>
     <string name="title_activity_grafico">Grafico</string>
     <string name="help">Teste Menu</string>
     <string name="testeMenu">Teste dois</string>
-    <string-array name="spinnerTipoAnimal">
-        <item >Laine</item>
-        <item >Teste</item>
-        <item >Josee</item>
-    </string-array>
-    
-    
+
     <string-array name="menu">
         <item>Cadastro de Animais</item>
         <item>Cadastro de Ingrediente</item>
@@ -75,7 +70,6 @@
         <item>-7829368</item>
         <item>-3355444</item>
         <item>-65536</item>
-     </string-array>
-    
+    </string-array>
 
 </resources>
