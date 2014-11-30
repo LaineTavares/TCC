@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TCC</string>
+    <string name="app_name">ANIMALLE</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="ContextoDados_onUpgrade">         CREATE TABLE IF NOT EXISTS  Animais (ID INTEGER PRIMARY KEY AUTOINCREMENT, Tipo TEXT, Cor TEXT);</string>
@@ -19,6 +19,7 @@
     <string name="btnCancelar">Cancelar</string>
     <string name="lblNome">Nome:</string>
     <string name="lblSel_Ingrediente">Selecione um Ingrediente:</string>
+    <string name="btnGeraGrafico">Gera Gráfico</string>
     <string name="porcNutriente">Porcentagem Nutriente</string>
     <string name="lblSel_Nutriente">Selecione um Nutriente:</string>
     <string name="lblCor">Cor:</string>
@@ -49,6 +50,7 @@
     <string name="title_activity_rel_nutriente">Relatórios</string>
     <string name="titel_activity_rel_ingrediente">Relatório Ingrediente</string>
     <string name="title_activity_rel_animais"> Relatório Animais</string>
+    <string name="title_activity_grafico_nutriente">Gera Relatorio</string>
     <string name="title_activity_cadastros">Cadastros</string>
     <string name="title_activity_relatorios">Relatórios</string>
     <string name="title_activity_grafico">Gráficos</string>

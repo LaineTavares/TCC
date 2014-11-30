@@ -14,6 +14,7 @@ import org.achartengine.renderer.DefaultRenderer;
 import org.achartengine.renderer.SimpleSeriesRenderer;
 import entidades.Animal;
 import entidades.Ingrediente;
+import entidades.Ingrediente_Nutriente;
 import entidades.Nutriente;
 
 
@@ -59,7 +60,7 @@ public class MainActivity extends Activity {
 	private String[] menuItems;
 	private AdapterListViewNutriente exemploAdapter;
 	private List<Nutriente> listaExemplo;
-	String cor="";
+	
 	
 	
 	@Override
@@ -125,7 +126,8 @@ public class MainActivity extends Activity {
 				 btnGraficos = (Button) findViewById(R.id.btnGraficos);
 			     btnGraficos.setOnClickListener(new OnClickListener() {
 						public void onClick(View v) {
-							abrirGrafico();
+							Intent it = new Intent(getApplicationContext(), GraficoDeNutriente.class);
+			        		startActivity(it);
 							
 						}
 					});	 
@@ -144,72 +146,6 @@ public class MainActivity extends Activity {
             return rootView;
         }
     }
-	public void abrirGrafico(){	
-		final DefaultRenderer defaultRenderer = new DefaultRenderer();
-		defaultRenderer.setChartTitle("Amostra de ingredientes");
-	    defaultRenderer.setZoomButtonsVisible(false);
-	    defaultRenderer.setLegendTextSize(40);
-	    defaultRenderer.setZoomEnabled(false);
-	    defaultRenderer.setChartTitleTextSize(30);
-	    defaultRenderer.setLabelsTextSize(30);
-	    defaultRenderer.setLabelsColor(Color.GRAY);
-	    defaultRenderer.setStartAngle(180);
-	    defaultRenderer.setDisplayValues(false);
-	    defaultRenderer.setShowLegend(true);
-	    defaultRenderer.setShowLabels(true);
-	    defaultRenderer.setClickEnabled(true);
-	    defaultRenderer.setInScroll(true);
-	    final CategorySeries categorySeries = new CategorySeries("");
-
-	    final NumberFormat numberFormat= NumberFormat.getNumberInstance();
-	    numberFormat.setParseIntegerOnly(true);
-	    numberFormat.setMinimumFractionDigits(0);
-
-	    List<Nutriente> listNutriente = new ArrayList<Nutriente>();
-	    listNutriente.add(new Nutriente("teste", 1));
-	    listNutriente.add(new Nutriente("aaaaa", 2));
-	    for (Nutriente n : listNutriente){
-	       categorySeries.add(n.getNome(), n.getId());
-	       SimpleSeriesRenderer renderer = new SimpleSeriesRenderer();
-	       renderer.setColor(Integer.valueOf(setaCorBackgroundRandom()));
-	       
-	       renderer.setChartValuesFormat(numberFormat);
-	       defaultRenderer.addSeriesRenderer(renderer);
-	    }
-	    
-	    
-	    final GraphicalView graphicalView = ChartFactory.getPieChartView(this, categorySeries, defaultRenderer);
-
-
-    graphicalView.setOnClickListener(new View.OnClickListener() {
-	            @Override
-	            public void onClick(View v) {
-	            	SeriesSelection seriesSelection = graphicalView.getCurrentSeriesAndPoint();
-	              if (seriesSelection != null) {
-	                  for (int i = 0; i < categorySeries.getItemCount(); i++) {
-	                	  defaultRenderer.getSeriesRendererAt(i).setHighlighted(i == 
-	                	  seriesSelection.getPointIndex());
-	                    }
-	                    graphicalView.repaint();
-
-	                            }
-	              }
-	          });
-
-	    AlertDialog.Builder builder = new Builder(this);
-	    builder.setTitle("Gráfico!");
-	    builder.setView(graphicalView);
-	    builder.setNegativeButton("Fechar", null);
-	    builder.setInverseBackgroundForced(true);
-
-	    builder.create().show();
-	  }
-	  private String setaCorBackgroundRandom(){
-	        
-	        Cores cores = new Cores(getApplicationContext());
-	        cor = cores.getRandomCorSemRepetir(cor);
-	        return cor;
-	    }
-
+	
 	
 }
