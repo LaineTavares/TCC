@@ -89,7 +89,7 @@ public class VinculaIngredienteAAnimal extends Activity {
 						|| adapterAnimal.getCount() == 0
 						|| adapterIngrediente.getCount() == 0) {
 					Toast.makeText(getApplicationContext(),
-							"O campo deve ser preenchido!", Toast.LENGTH_SHORT)
+							"Todos os campos devem serem preenchidos!", Toast.LENGTH_SHORT)
 							.show();
 				} else {
 					String porc = porcIngrediente.getText().toString();

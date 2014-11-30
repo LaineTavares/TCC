@@ -12,14 +12,11 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
-import entidades.Animal;
 import entidades.Ingrediente;
 import entidades.Ingrediente_Nutriente;
 import entidades.Nutriente;
-import entidades.TipoAnimal;
 
 public class VinculaIngredienteNutriente extends Activity {
 
@@ -92,7 +89,7 @@ public class VinculaIngredienteNutriente extends Activity {
 						|| adapterIngrediente.getCount() == 0
 						|| adapterNutriente.getCount() == 0) {
 					Toast.makeText(getApplicationContext(),
-							"O campo deve ser preenchido!", Toast.LENGTH_SHORT)
+							"Todos os campos devem serem preenchidos!", Toast.LENGTH_SHORT)
 							.show();
 				} else {
 					String porc = porcNutriente.getText().toString();
