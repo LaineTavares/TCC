@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class Cadastros extends Activity{
 	Button btnCadastroIngrediente, btnCadastroAnimal, btnCadastroTipoAnimal, btnCadastroNutriente,
-	btnVincula, btnVoltar;
+	btnVinculaIng_Nutri, btnVinculaAnimalIngre, btnVoltar;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +57,19 @@ public class Cadastros extends Activity{
        				            
             }});
         
-        btnVincula = (Button)findViewById(R.id.btnVincula);
-        btnVincula.setOnClickListener(new OnClickListener(){
+        btnVinculaIng_Nutri = (Button)findViewById(R.id.btnVinculaIngre_Nutri);
+        btnVinculaIng_Nutri.setOnClickListener(new OnClickListener(){
             public void onClick(View v) {
             Intent it = new Intent(getApplicationContext(), VinculaIngredienteNutriente.class);
+            startActivity(it);
+            
+       				            
+            }});
+        
+        btnVinculaAnimalIngre = (Button)findViewById(R.id.btnVinculaAnimal_Ingre);
+        btnVinculaAnimalIngre.setOnClickListener(new OnClickListener(){
+            public void onClick(View v) {
+            Intent it = new Intent(getApplicationContext(), VinculaIngredienteAAnimal.class);
             startActivity(it);
             
        				            

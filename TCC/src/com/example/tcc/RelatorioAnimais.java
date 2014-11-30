@@ -29,7 +29,7 @@ public class RelatorioAnimais extends Activity{
 		 super.onCreate(savedInstanceState);
 		 setContentView(R.layout.relatorio_animais);
 		 lista = (ListView) findViewById(R.id.listAnimais);
-		 montaListaIngrediente();
+		 montaListaAnimal();
 		 Log.i("lista" , listaAnimal.size() + "");
 		 adapterAnimal = new AdapterListViewAnimais(RelatorioAnimais.this, listaAnimal); 
 		 lista.setAdapter(adapterAnimal);
@@ -37,10 +37,10 @@ public class RelatorioAnimais extends Activity{
 		 CarregarInterfaceCadastro();
 		}
 	
-	private void montaListaIngrediente(){
+	private void montaListaAnimal(){
 		listaAnimal = new ArrayList<Animal>();
 		TccDao tccDao = TccDao.getInstance(this);
-		listaAnimal = tccDao.recuperarTodasAnimal();
+		listaAnimal = tccDao.recuperarTodosAnimal();
 		for(Animal animal: listaAnimal){
 		   	Log.i("entrei", animal.getNome());
 		}

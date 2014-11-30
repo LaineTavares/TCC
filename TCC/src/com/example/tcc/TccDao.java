@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.provider.ContactsContract.DataUsageFeedback;
 import android.util.Log;
 import entidades.Animal;
+import entidades.Animal_Ingrediente;
 import entidades.Ingrediente;
 import entidades.Ingrediente_Nutriente;
 import entidades.Nutriente;
@@ -33,6 +34,12 @@ public class TccDao {
 	public static final String idIngre_Nutri = "idIngre_Nutri";
 	public static final String porcentagem_Nutri = "porcentagem_Nutri";
 	public static final String idNutri_Ingre = "idNutri_Ingri";
+	
+	public static final String tabela_animal_ingrediente = "Animal_Ingrediente";
+	public static final String idTabelaAnimalIngrediente = "idTabelaAnimalIngrediente";
+	public static final String idAnimal_Ingre = "idAnimal_Ingre";
+	public static final String porcentagem_Ingrediente = "porcentagem_Ingrediente";
+	public static final String idIngre_Animal = "idIngre_Animal";
 
 	public static final String tabela_nutriente = "Nutrientes";
 	public static final String idTabelaNutriente = "idTabelaNutriente";
@@ -81,6 +88,18 @@ public class TccDao {
 	public static final String DELETE_TABLE_INGREDIENTE_NUTRIENTE = "DROP TABLE IF EXISTS "
 			+ tabela_ingrediente_nutriente;
 
+	public static final String CREATE_TABLE_ANIMAL_INGREDIENTE = "CREATE TABLE IF NOT EXISTS "
+			+ tabela_animal_ingrediente
+			+ "("
+			+ idTabelaAnimalIngrediente
+			+ " INTEGER PRIMARY KEY AUTOINCREMENT,"
+			+ idAnimal_Ingre
+			+ " Long ,"
+			+ porcentagem_Ingrediente + " TEXT ," + idIngre_Animal + " LONG );";
+
+	public static final String DELETE_ANIMAL_INGREDIENTE = "DROP TABLE IF EXISTS "
+			+ tabela_animal_ingrediente;
+	
 	public static final String CREATE_TABLE_NUTRIENTE = "CREATE TABLE IF NOT EXISTS "
 			+ tabela_nutriente
 			+ "("
@@ -127,6 +146,13 @@ public class TccDao {
 		dataBase.insert(tabela_ingrediente_nutriente, null, values);
 
 	}
+	
+	public void salvar(Animal_Ingrediente animal_ingre) {
+		ContentValues values = gerarContentValuesAnimalIngrediente(animal_ingre);
+		dataBase.insert(tabela_animal_ingrediente, null, values);
+
+	}
+
 
 	public void salvar(Ingrediente ingrediente) {
 		ContentValues values = gerarContentValuesIngredientes(ingrediente);
@@ -193,8 +219,19 @@ public class TccDao {
 
 		return values;
 	}
+	
+	private ContentValues gerarContentValuesAnimalIngrediente(
+			Animal_Ingrediente animal_ingrediente) {
+		ContentValues values = new ContentValues();
+		// values.put(idTabelaIngredienteNutriente, ing_nutri.getId());
+		values.put(idIngre_Animal, animal_ingrediente.getIngrediente().getId());
+		values.put(idAnimal_Ingre, animal_ingrediente.getAnimal().getId());
+		values.put(porcentagem_Ingrediente, animal_ingrediente.getPorcentagemIngrediente());
 
-	public List<Animal> recuperarTodasAnimal() {
+		return values;
+	}
+
+	public List<Animal> recuperarTodosAnimal() {
 		String queryReturnAll = "SELECT * FROM " + tabela_animal;
 		Cursor cursor = dataBase.rawQuery(queryReturnAll, null);
 		List<Animal> animais = construirAnimalPorCursor(cursor);

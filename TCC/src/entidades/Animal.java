@@ -58,4 +58,9 @@ public class Animal {
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
+	
+	@Override
+	 public String toString(){
+	  return nome;
+	 }
 }

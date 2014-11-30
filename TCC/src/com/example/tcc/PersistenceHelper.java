@@ -21,6 +21,7 @@ public class PersistenceHelper extends SQLiteOpenHelper{
 	private static final String LOG_TAG2 = "Nutriente";
 	private static final String LOG_TAG3 = "TipoAnimal";
 	private static final String LOG_TAG4 = "Ingrediente_Nutriente";
+	private static final String LOG_TAG5 = "Animal_Ingrediente";
 		
 	private  static PersistenceHelper instance;
 
@@ -45,6 +46,7 @@ public class PersistenceHelper extends SQLiteOpenHelper{
 	        db.execSQL(TccDao.CREATE_TABLE_NUTRIENTE);
 	        db.execSQL(TccDao.CREATE_TABLE_TIPO_ANIMAL);
 	        db.execSQL(TccDao.CREATE_TABLE_INGREDIENTE_NUTRIENTE);
+	        db.execSQL(TccDao.CREATE_TABLE_ANIMAL_INGREDIENTE);
 	    
 	    }
 	 
@@ -59,6 +61,8 @@ public class PersistenceHelper extends SQLiteOpenHelper{
 	      	db.execSQL(TccDao.DELETE_TABLE_TIPO_ANIMAL);
 	      			onCreate(db);
 	      	db.execSQL(TccDao.DELETE_TABLE_INGREDIENTE_NUTRIENTE);
+	      			onCreate(db);
+	      	db.execSQL(TccDao.DELETE_ANIMAL_INGREDIENTE);
 	      			onCreate(db);
 	    }
 	    

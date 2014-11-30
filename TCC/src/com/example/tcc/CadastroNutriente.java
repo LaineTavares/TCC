@@ -12,12 +12,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CadastroNutriente extends Activity {
 
 	Button btnSalvarNutriente, btnCancelarNutriente;
 	EditText txtNomeNutriente;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,51 +26,55 @@ public class CadastroNutriente extends Activity {
 		CarregarInterfaceCadastro();
 	}
 
-	
-	public void CarregarInterfaceCadastro()
-    { 
-        
-        btnCancelarNutriente = (Button)findViewById(R.id.btnCancelarNutriente);
-        btnCancelarNutriente.setOnClickListener(new OnClickListener(){
-            public void onClick(View v) {
-            	 
-	       		 finish();
-            }});
- 
-        //configurando o formulário de cadastro
-        txtNomeNutriente = (EditText)findViewById(R.id.txtNomeNutriente);
-             
- 
-        //configurando o botão de salvar
-        btnSalvarNutriente = (Button)findViewById(R.id.btnSalvarNutriente);
-        btnSalvarNutriente.setOnClickListener(new OnClickListener(){
-           
+	public void CarregarInterfaceCadastro() {
+
+		btnCancelarNutriente = (Button) findViewById(R.id.btnCancelarNutriente);
+		btnCancelarNutriente.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+
+				finish();
+			}
+		});
+
+		// configurando o formulário de cadastro
+		txtNomeNutriente = (EditText) findViewById(R.id.txtNomeNutriente);
+
+		// configurando o botão de salvar
+		btnSalvarNutriente = (Button) findViewById(R.id.btnSalvarNutriente);
+		btnSalvarNutriente.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				String nomeNutriente = txtNomeNutriente.getText().toString();
-				Nutriente nutriente = new Nutriente(nomeNutriente, 1);
-				insereNutriente(nutriente);
-            }});
-    }
+				if (txtNomeNutriente.getText().toString().equals("")) {
+					Toast.makeText(getApplicationContext(),
+							"O campo deve ser preenchido!", Toast.LENGTH_SHORT)
+							.show();
+				} else {
+					String nomeNutriente = txtNomeNutriente.getText()
+							.toString();
+					Nutriente nutriente = new Nutriente(nomeNutriente, 1);
+					insereNutriente(nutriente);
+				}
+			}
+		});
+	}
+
 	public TccDao tccDao;
-	
-	public void insereNutriente(Nutriente nutriente)
-    {
-      tccDao = TccDao.getInstance(this);
- 		Log.d("nutriente",
-				"salvando nutriente -> " + nutriente.getId() + " -> "
-						+ nutriente.getNome());
+
+	public void insereNutriente(Nutriente nutriente) {
+		tccDao = TccDao.getInstance(this);
+		Log.d("nutriente", "salvando nutriente -> " + nutriente.getId()
+				+ " -> " + nutriente.getNome());
 		tccDao.salvar(nutriente);
 		List<Nutriente> nutrientes = tccDao.recuperarTodosNutrientes();
-		for(Nutriente nutrienteFor : nutrientes){
+		for (Nutriente nutrienteFor : nutrientes) {
 			Log.d("nutriente", nutrienteFor.getNome());
-			
+
 		}
-		
+
 		finish();
-    
-    }
-	
+
+	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

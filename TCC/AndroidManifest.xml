@@ -66,6 +66,10 @@
             android:name="com.example.tcc.GraficoDeNutriente"
             android:label="@string/title_activity_grafico_nutriente" >
         </activity>
+        <activity
+            android:name="com.example.tcc.VinculaIngredienteAAnimal"
+            android:label="@string/title_activity_animal_ingrediente" >
+        </activity>
     </application>
 
 </manifest>
