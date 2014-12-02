@@ -74,7 +74,7 @@ public class GraficoDeNutriente extends Activity {
 
 	public void abrirGrafico(Ingrediente ingrediente) {
 		final DefaultRenderer defaultRenderer = new DefaultRenderer();
-		defaultRenderer.setChartTitle("Amostra de Nutrientes");
+		defaultRenderer.setChartTitle("Nutrientes do ingrediente: " + ingrediente.getNomeIngrediente());
 		defaultRenderer.setZoomButtonsVisible(false);
 		defaultRenderer.setLegendTextSize(40);
 		defaultRenderer.setZoomEnabled(false);

@@ -34,7 +34,7 @@ public class TccDao {
 	public static final String idIngre_Nutri = "idIngre_Nutri";
 	public static final String porcentagem_Nutri = "porcentagem_Nutri";
 	public static final String idNutri_Ingre = "idNutri_Ingri";
-	
+
 	public static final String tabela_animal_ingrediente = "Animal_Ingrediente";
 	public static final String idTabelaAnimalIngrediente = "idTabelaAnimalIngrediente";
 	public static final String idAnimal_Ingre = "idAnimal_Ingre";
@@ -95,11 +95,14 @@ public class TccDao {
 			+ " INTEGER PRIMARY KEY AUTOINCREMENT,"
 			+ idAnimal_Ingre
 			+ " Long ,"
-			+ porcentagem_Ingrediente + " TEXT ," + idIngre_Animal + " LONG );";
+			+ porcentagem_Ingrediente
+			+ " TEXT ,"
+			+ idIngre_Animal
+			+ " LONG );";
 
 	public static final String DELETE_ANIMAL_INGREDIENTE = "DROP TABLE IF EXISTS "
 			+ tabela_animal_ingrediente;
-	
+
 	public static final String CREATE_TABLE_NUTRIENTE = "CREATE TABLE IF NOT EXISTS "
 			+ tabela_nutriente
 			+ "("
@@ -146,13 +149,12 @@ public class TccDao {
 		dataBase.insert(tabela_ingrediente_nutriente, null, values);
 
 	}
-	
+
 	public void salvar(Animal_Ingrediente animal_ingre) {
 		ContentValues values = gerarContentValuesAnimalIngrediente(animal_ingre);
 		dataBase.insert(tabela_animal_ingrediente, null, values);
 
 	}
-
 
 	public void salvar(Ingrediente ingrediente) {
 		ContentValues values = gerarContentValuesIngredientes(ingrediente);
@@ -219,14 +221,15 @@ public class TccDao {
 
 		return values;
 	}
-	
+
 	private ContentValues gerarContentValuesAnimalIngrediente(
 			Animal_Ingrediente animal_ingrediente) {
 		ContentValues values = new ContentValues();
 		// values.put(idTabelaIngredienteNutriente, ing_nutri.getId());
 		values.put(idIngre_Animal, animal_ingrediente.getIngrediente().getId());
 		values.put(idAnimal_Ingre, animal_ingrediente.getAnimal().getId());
-		values.put(porcentagem_Ingrediente, animal_ingrediente.getPorcentagemIngrediente());
+		values.put(porcentagem_Ingrediente,
+				animal_ingrediente.getPorcentagemIngrediente());
 
 		return values;
 	}
@@ -246,16 +249,28 @@ public class TccDao {
 
 		return ingredientes;
 	}
-	
-	public List<Ingrediente_Nutriente> recuperaTodosIngri_Nutri(Ingrediente ingrediente){
-		String queryReturnAll = "select n.nomeNutriente, i.porcentagem_Nutri from Ingredientes_Nutrientes " +
-				" as i join Nutrientes as n on n.idTabelaNutriente = i.idNutri_Ingri" +
-				" where i.idIngre_Nutri = " + ingrediente.getId();
+
+	public List<Ingrediente_Nutriente> recuperaTodosIngri_Nutri(
+			Ingrediente ingrediente) {
+		String queryReturnAll = "select n.nomeNutriente, i.porcentagem_Nutri from Ingredientes_Nutrientes "
+				+ " as i join Nutrientes as n on n.idTabelaNutriente = i.idNutri_Ingri"
+				+ " where i.idIngre_Nutri = " + ingrediente.getId();
 		Cursor cursor = dataBase.rawQuery(queryReturnAll, null);
 		List<Ingrediente_Nutriente> ingri_nutriente = construirVinculo(cursor);
-		
+
 		return ingri_nutriente;
-		
+
+	}
+
+	public List<Animal_Ingrediente> recuperaTodosAni_Ingre(Animal animal) {
+		String queryReturnAll = "select i.[nomeIngrediente], a.[porcentagem_Ingrediente] "
+				+ "from [Animal_Ingrediente] a join [Ingredientes] i on i.[Ingredientes] = a.[idIngre_Animal]"
+				+ "where a.[idAnimal_Ingre] = " + animal.getId();
+		Cursor cursor = dataBase.rawQuery(queryReturnAll, null);
+		List<Animal_Ingrediente> animal_ingrediente = construirVinculoAnimal(cursor);
+
+		return animal_ingrediente;
+
 	}
 
 	public List<Nutriente> recuperarTodosNutrientes() {
@@ -336,6 +351,42 @@ public class TccDao {
 			cursor.close();
 		}
 		return ing_nutri;
+	}
+
+	private List<Animal_Ingrediente> construirVinculoAnimal(Cursor cursor) {
+
+		List<Animal_Ingrediente> animal_ingre = new ArrayList<Animal_Ingrediente>();
+
+		if (cursor == null)
+			return animal_ingre;
+
+		try {
+
+			if (cursor.moveToFirst()) {
+				do {
+
+					int indexNomeIngrediente = cursor
+							.getColumnIndex(nomeIngrediente);
+					int indexPorcetangem = cursor
+							.getColumnIndex(porcentagem_Ingrediente);
+
+					String nome = cursor.getString(indexNomeIngrediente);
+					String porcetantagem = String.valueOf(cursor
+							.getString(indexPorcetangem));
+
+					Ingrediente ingrediente = new Ingrediente(nome, null, null);
+					Animal_Ingrediente animal_ingrediente = new Animal_Ingrediente(
+							null, ingrediente, null, porcetantagem);
+
+					animal_ingre.add(animal_ingrediente);
+
+				} while (cursor.moveToNext());
+			}
+
+		} finally {
+			cursor.close();
+		}
+		return animal_ingre;
 	}
 
 	private List<Animal> construirAnimalPorCursor(Cursor cursor) {

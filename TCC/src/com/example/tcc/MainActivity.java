@@ -126,7 +126,7 @@ public class MainActivity extends Activity {
 				 btnGraficos = (Button) findViewById(R.id.btnGraficos);
 			     btnGraficos.setOnClickListener(new OnClickListener() {
 						public void onClick(View v) {
-							Intent it = new Intent(getApplicationContext(), GraficoDeNutriente.class);
+							Intent it = new Intent(getApplicationContext(), Graficos.class);
 			        		startActivity(it);
 							
 						}

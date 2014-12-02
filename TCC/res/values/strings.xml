@@ -19,7 +19,10 @@
     <string name="btnCancelar">Cancelar</string>
     <string name="lblNomeAnimal">Nome do Animal:</string>
     <string name="lblSel_Ingrediente">Selecione um Ingrediente:</string>
+    <string name="lblSel_Animal_i">Selecione um Animal:</string>
+    <string name="btnGeraGraficoIngrediente_Animal">Gerar Gráfico</string>
     <string name="btnGeraGrafico">Gera Gráfico</string>
+    <string name="btnGeraGraficoIngrediente">Gera Gráfico</string>
     <string name="porcNutriente">Porcentagem Nutriente</string>
     <string name="lblSel_Nutriente">Selecione um Nutriente:</string>
     <string name="porcIngrediente">Porcentagem do Ingrediente:</string>
@@ -54,6 +57,8 @@
     <string name="title_activity_rel_animais"> Relatório Animais</string>
     <string name="title_activity_animal_ingrediente">Vincula Ingrediente à Animal</string>
     <string name="title_activity_grafico_nutriente">Gera Relatorio</string>
+    <string name="title_activity_grafico_ingrediente">Gera Grafico Ingrediente</string>
+    <string name="title_activity_graficos">Gera graficos</string>
     <string name="title_activity_cadastros">Cadastros</string>
     <string name="title_activity_relatorios">Relatórios</string>
     <string name="title_activity_grafico">Gráficos</string>
